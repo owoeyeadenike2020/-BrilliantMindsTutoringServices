@@ -273,14 +273,14 @@ const Gallery = () => {
             category: "E-Learning"
         },
         {
-            id: 11,
+            id: 12,
             title: "Online Education",
             description: "PROVIDES EVERYONE WITH THE CHANCE TO NETWORK WITH PEERS FROM AROUND THE WORLD.",
             image: "/images/banner/young-student-working-assignment.jpg",
             category: "E-Learning"
         },
         {
-            id: 11,
+            id: 13,
             title: "Online Education",
             description: "PROVIDES EVERYONE WITH THE CHANCE TO NETWORK WITH PEERS FROM AROUND THE WORLD.",
             image: "/images/banner/student.jpg",
