@@ -1,10 +1,49 @@
+// import { Poppins } from "next/font/google";
+// import "./globals.css";
+// import Header from "@/components/Layout/Header";
+// import Footer from "@/components/Layout/Footer";
+// import { ThemeProvider } from "next-themes";
+// import ScrollToTop from "@/components/ScrollToTop";
+// const font = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"], });
+
+// export default function RootLayout({
+//   children,
+// }: Readonly<{
+//   children: React.ReactNode;
+// }>) {
+//   return (
+//     <html lang="en" suppressHydrationWarning>
+//       <body className={`${font.className}`}>
+//         <ThemeProvider
+//           attribute="class"
+//           enableSystem={true}
+//           defaultTheme="light"
+//         >
+//           <Header />
+//           {children}
+//           <Footer />
+//           <ScrollToTop />
+//         </ThemeProvider>
+//       </body>
+//     </html>
+//   );
+// }
+
+
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import { ThemeProvider } from "next-themes";
 import ScrollToTop from "@/components/ScrollToTop";
-const font = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"], });
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  preload: true,
+  fallback: ['system-ui', 'arial'],
+});
 
 export default function RootLayout({
   children,
@@ -13,12 +52,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${font.className}`}>
-        <ThemeProvider
-          attribute="class"
-          enableSystem={true}
-          defaultTheme="light"
-        >
+      <body className={poppins.className}>
+        <ThemeProvider attribute="class">
           <Header />
           {children}
           <Footer />
