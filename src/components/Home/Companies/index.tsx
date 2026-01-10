@@ -70,7 +70,12 @@ const Companies = () => {
                     <Slider {...settings}>
                         {TruestedCompanies.map((item, i) =>
                             <div key={i}>
-                                <Image src={`${getImagePrefix()}${item.imgSrc}`} alt={item.imgSrc} width={200} height={45} />
+                                  <Image 
+                                    src={item.imgSrc} 
+                                    alt={item.imgSrc} 
+                                    width={200} 
+                                    height={45} 
+                                />
                             </div>
                         )}
                     </Slider>
