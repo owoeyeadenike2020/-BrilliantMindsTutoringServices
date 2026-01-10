@@ -8,7 +8,7 @@ import Newsletter from "@/components/Home/Newsletter";
 import Gallery from "@/components/Home/Gallery";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "eLearning",
+  title: "Brilliant Minds",
 };
 
 export default function Home() {
